@@ -145,54 +145,46 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-
-const Text("PassGen",
-style: TextStyle(
-    fontSize: 24,  // Set the font size here
-  ),),
-
+            const Text(
+              "PassGen",
+              style: TextStyle(
+                fontSize: 28, // Set the font size here
+              ),
+            ),
+            const SizedBox(height: 4),
             Container(
               margin: EdgeInsets.all(15),
-              width: double
-                  .infinity,
+              width: double.infinity,
               decoration: BoxDecoration(
                 border: Border.all(
-                  color: Theme.of(context)
-                      .primaryColorLight, 
-                  width: 2, 
+                  color: Theme.of(context).primaryColorLight,
+                  width: 2,
                 ),
-                borderRadius:
-                    BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(8),
               ),
-              padding: const EdgeInsets.all(
-                  8),
+              padding: const EdgeInsets.all(8),
               child: Text(
                 generatedPassword,
-                textAlign: TextAlign
-                    .center,
-                    style: const TextStyle(
-    fontSize: 20,  // Set the font size here
-  ),
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontSize: 20, // Set the font size here
+                ),
               ),
             ),
             Container(
               margin: EdgeInsets.all(10),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment
-                    .center,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ElevatedButton(
                     onPressed: _copyToClipboard,
                     child: const Text('Copy Password'),
                   ),
-                    const SizedBox(
-                        width:
-                            20),
+                  const SizedBox(width: 20),
                   ElevatedButton(
                     onPressed: _generatePassword,
                     child: const Text('Generate Password'),
                   ),
-                  
                 ],
               ),
             ),
